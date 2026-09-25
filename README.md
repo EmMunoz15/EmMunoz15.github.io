@@ -1,72 +1,110 @@
-NEUROLAB — PLANTILLA DEL SITIO (Parcial N°1, Ingeniería Web)
-=============================================================
+# NeuroLab — Sitio web sobre Redes Neuronales
 
-ESTRUCTURA DE CARPETAS
------------------------
-/html   -> index.html, acerca.html, contacto.html
-/css    -> styles.css (toda la hoja de estilos del sitio)
-/js     -> script.js (menú móvil + validación y guardado del formulario)
-/img    -> logo.svg y el gráfico decorativo de la red neuronal
-/video  -> coloca aquí tu video real (ver punto 3)
-/audio  -> coloca aquí tu audio real (ver punto 3)
+Sitio de 3 páginas (HTML5 + CSS3) para el **Parcial N°1** de la
+asignatura **Ingeniería Web**, Facultad de Ingeniería de Sistemas
+Computacionales, Universidad Tecnológica de Panamá (UTP). Tema:
+**Redes Neuronales**.
 
-IMPORTANTE: la indicación pide una carpeta primaria con los apellidos
-de los 2 integrantes. Renombra esta carpeta antes de subirla a Teams,
-por ejemplo: "Muñoz_Apellido2-Parcial1".
+## Contenido de cada página
 
-QUÉ REEMPLAZAR ANTES DE ENTREGAR
----------------------------------
-Busca los comentarios "<!-- Reemplazar... -->" y los recuadros con la
-X (los que dicen "Imagen") en cada página. Son las partes marcadas
-como plantilla:
+### `html/index.html` — Inicio
+- Hero con imagen de portada e introducción al tema.
+- **Conceptos clave**: neuronas artificiales, análisis de datos y
+  aprendizaje, cada uno con imagen propia.
+- Recuadro "Dato clave" sobre la cantidad de parámetros de una red
+  neuronal.
+- Tarjetas "Cómo funcionan" y "Casos de uso reales", con enlaces a
+  Acerca de y Contacto.
 
-1. Textos: cambia los párrafos de ejemplo por información real y
-   verificada sobre el tema asignado.
+### `html/acerca.html` — Acerca de
+- **¿Qué es la inteligencia artificial?**: definición y relación con
+  las redes neuronales, con imagen ilustrativa y explicación del flujo
+  de trabajo (recolección, limpieza y división de datos).
+- **Video introductorio**: video de YouTube embebido
+  (`youtube.com/embed/M6oDiCQCins`) sobre el tema.
+- Explicación del entrenamiento y la propagación inversa (backpropagation).
+- **Tipos de redes neuronales**: prealimentadas, recurrentes,
+  convolucionales (CNN) y adversariales (GAN).
+- **Audio complementario**: narración en `audio/ttsmaker-file-2026-9-24-22-53-54.mp3`,
+  con su transcripción completa incluida en la página como alternativa
+  accesible.
+- Aside "En esta sección" con enlaces internos (anclas `#inteligencia-artificial`,
+  `#tipos-de-redes`, `#audio`, `#impacto`) e imagen de apoyo.
+- **Impacto**: aplicaciones reales en accesibilidad (detección temprana
+  de Alzheimer por voz, traducción de lenguaje de señas en tiempo real,
+  subtitulado automático).
 
-2. Imágenes: sustituye cada <div class="placeholder-img">...</div>
-   por una etiqueta <img src="../img/tu-imagen.jpg" alt="..."> con tus
-   propias imágenes guardadas dentro de /img.
+### `html/contacto.html` — Contacto
+- Formulario validado (nombre, apellido, correo, teléfono, asunto,
+  mensaje) que guarda cada envío y descarga `contactos.json`
+  (`js/script.js`).
+- Aside "Antes de escribirnos" con recomendaciones para el usuario.
+- Bloque de ubicación (Universidad Tecnológica de Panamá, Campus
+  Víctor Levi Sasso) con mapa de Google Maps embebido.
 
-3. Video y audio (página acerca.html): agrega tus archivos reales en
-   /video y /audio, y actualiza el atributo "src" de las etiquetas
-   <video> y <audio> con el nombre de tu archivo.
+> ⚠️ El teléfono, el correo y la dirección de esta página aún tienen
+> valores de ejemplo — `(507) 000-0000` / `contacto@neurolab.com`.
+> Avísame si quieres que los reemplace por los datos reales antes de
+> entregar.
 
-4. Redes sociales y enlaces: cambia los href="https://www.tiktok.com/"
-   (y los de Instagram y X) por los perfiles reales, y ajusta el
-   teléfono/correo de la página de contacto.
+## Estructura de carpetas
 
-5. Mapa de Google (contacto.html): el recuadro grande ya tiene un
-   mapa funcional de ejemplo (Universidad Tecnológica de Panamá).
-   Para poner tu propia ubicación:
-     a) Abre Google Maps y busca tu dirección real.
-     b) Haz clic en "Compartir" → pestaña "Insertar un mapa".
-     c) Copia el código <iframe ...>...</iframe> que te da Google.
-     d) Pégalo dentro de <div class="map-frame"> reemplazando el
-        <iframe> actual.
-   (La forma rápida que ya está puesta, cambiando solo el texto
-   después de "q=" en el src, también funciona si no quieres usar
-   el paso a-c.)
+```
+├── html/
+│   ├── index.html
+│   ├── acerca.html
+│   └── contacto.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── img/     (íconos de redes sociales, logo e imágenes del contenido)
+└── audio/
+    └── ttsmaker-file-2026-9-24-22-53-54.mp3
+```
 
-SOBRE EL FORMULARIO DE CONTACTO
----------------------------------
-El formulario valida en el navegador (nombre, apellido, correo,
-teléfono, asunto y mensaje) y, al enviarse correctamente, guarda cada
-registro en el almacenamiento local del navegador y descarga un
-archivo "contactos.json" con los datos — así se cumple el punto de
-"guardar los datos en un archivo de datos" sin necesitar un servidor.
-Si tu profesora pide que se guarde en el servidor, deberás reemplazar
-esa parte de /js/script.js por una petición (fetch) a un backend en
-PHP, Node.js, etc.
+## Tecnologías
 
-TÉCNICA DE DISEÑO UTILIZADA
-------------------------------
-Wireframes de baja fidelidad (los que te compartieron) como base del
-diseño. Recuerda mencionar esta técnica en tu entrega, como pide la
-indicación 4 del parcial.
+- HTML5 semántico (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`)
+- CSS3 (variables, Grid, Flexbox, diseño responsive)
+- JavaScript nativo (menú móvil, validación y guardado del formulario)
+- Video embebido de YouTube y audio narrado (generado con una
+  herramienta de texto a voz)
+- Tipografías: Space Grotesk (títulos) e IBM Plex Sans (texto), vía Google Fonts
 
-SUBIR A HOSTING GRATUITO
----------------------------
-Servicios gratuitos donde puedes subir esta carpeta (o solo el
-contenido de /html, /css, /img, /js) tal cual: Netlify Drop, GitHub
-Pages o Vercel. Recuerda que index.html debe quedar accesible en la
-raíz del sitio publicado.
+## Paleta de colores
+
+| Color              | Uso                              | Hex        |
+|--------------------|------------------------------------|------------|
+| Azul marino         | Fondos oscuros, texto de títulos   | `#0A1628` |
+| Cobalto             | Color de marca / enlaces           | `#2444B8` |
+| Cobalto claro       | Estados hover                      | `#3B5FE0` |
+| Turquesa (acento)   | Detalles y contraste               | `#00C7B1` |
+| Fondo claro         | Fondo general del sitio            | `#F5F7FB` |
+
+## Funcionalidades
+
+- Navegación responsive con menú hamburguesa en móvil.
+- Formulario de contacto validado en el navegador.
+- Guardado de cada envío en `localStorage` y descarga automática de
+  `contactos.json`.
+- Mapa de Google Maps embebido.
+- Accesibilidad: transcripción del audio, foco de teclado visible y
+  respeto a `prefers-reduced-motion`.
+
+## Antes de subirlo a un hosting público
+
+Varias imágenes provienen de bancos de imágenes/stock (Vecteezy,
+iStock, etc.) identificables por su nombre de archivo. Si el sitio se
+publicará públicamente (no solo para la entrega del parcial), conviene
+verificar la licencia de uso de cada una o sustituirlas por imágenes
+propias o de bancos con licencia libre.
+
+## Técnica de diseño utilizada
+
+Wireframes de baja fidelidad, usados como base para la estructura y
+disposición de cada página.
+
+## Autoría
+
+Proyecto académico — Emilio Muñoz Ortiz, Ingeniería Web (1SF134), UTP.
