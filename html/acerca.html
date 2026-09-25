@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroLab</title>
+  <meta name="description" content="Qué son las redes neuronales y la inteligencia artificial, explicado de forma sencilla.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold;">
+        <img src="../img/logo.svg" alt="Logotipo de NeuroLab" style="width: 50px; height: 50px;">
+        NeuroLab
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="acerca.html" aria-current="page">Acerca de</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="../img/vecteezy_tiktok-logo-tiktok-app-social-media-icons_31737216.png" alt="TikTok" style="width: fill; height: fill;">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="../img/vecteezy_instagram-logo-instagram-social-media-icon_42148632.png" alt="Instagram" style="width: fill; height: fill;">
+        </a>
+
+        <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <img src="../img/vecteezy_x-twitter-icon-logo-symbol_53986348.png" alt="X (Twitter)" style="width: fill; height: fill;">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BANNER -->
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Redes Neuronales</h1>
+        <!-- Reemplazar por la bajada real -->
+        <p>Un acercamiento claro a la tecnología que impulsa el reconocimiento de voz, la visión por
+           computadora y buena parte de la inteligencia artificial moderna. Al comprender sus fundamentos, se revela 
+           cómo las redes neuronales transforman la teoría matemática en herramientas prácticas que redefinen 
+           la interacción entre las personas y la tecnología.</p>
+        <a href="contacto.html" class="btn btn-primary">Escríbenos</a>
+      </div>
+    </section>
+
+    <!-- ARTÍCULO + ASIDE -->
+    <section class="section-alt">
+      <div class="container article-layout">
+
+        <article>
+          <h2 id="inteligencia-artificial">Inteligencia Artificial</h2>
+          <h3>¿Qué es la inteligencia artificial?</h3>
+            <p>La inteligencia artificial es el campo de la computación dedicado a crear sistemas capaces
+              de realizar tareas que normalmente requieren razonamiento humano, como reconocer imágenes,
+              comprender lenguaje natural o tomar decisiones.</p>
+            <p>Las redes neuronales son uno de los modelos más usados dentro de la IA: se organizan en
+              capas de nodos interconectados que ajustan sus parámetros a partir de ejemplos, en un
+              proceso conocido como entrenamiento.</p><br>
+
+          <div class="article-media">
+            <div>
+              <img src="../img/cq5dam.web.1280.1280.jpeg" style="width:100%; max-width: 580px; border-radius: 8px;" alt="Ilustración de una red neuronal  ">
+            </div>
+            <div>
+              <h3>De la teoría a la práctica</h3>
+              <p>Para llevar estos conceptos matemáticos a la práctica, se sigue un flujo de trabajo
+                estructurado que inicia con la recolección, limpieza y división de datos en conjuntos de entrenamiento,
+                validación y prueba.</p>
+            </div>
+          </div>
+
+          <h3>Video introductorio</h3>
+          
+          <div>    
+            <iframe width=100% height="465" src="https://www.youtube.com/embed/M6oDiCQCins?si=80xikGrNokTSO4Mn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <br>
+
+          <p>El aprendizaje en las redes neuronales se produce cuando se crean conexiones y se ajustan sus pesos 
+            entre las neuronas mediante un proceso llamado entrenamiento. Esto implica alimentar la red con grandes 
+            conjuntos de datos que luego usa para definir mejor sus ponderaciones y minimizar errores entre sus predicciones 
+            y los valores reales.</p>
+            
+          <p>Este proceso es similar a la forma en la que aprenden los seres humanos, en el
+            que la exposición repetida ayuda a reconocer patrones. Una técnica llamada propagación inversa facilita
+            este ajuste de peso. La propagación inversa calcula el error en la salida y lo propaga a través de la red,
+            ajustando de forma iterativa las ponderaciones hasta que se alcanza el nivel de exactitud deseado. Una vez
+            entrenado, la red puede hacer predicciones sobre datos nuevos, como identificar gatos en imágenes.</p>
+          <br>
+
+          <hr><br>
+          <h2 id="tipos-de-redes">Tipos de Redes Neuronales</h2>
+          <ul>
+            <li>
+              <h3>Redes neuronales prealimentadas</h3>
+              <p>Las redes neuronales prealimentadas son el tipo más básico de red neuronal. En estas redes, la información
+                fluye en una sola dirección, desde la capa de entrada hasta la capa de salida, sin ciclos ni bucles. Son
+                ideales para tareas de clasificación y regresión donde los datos no tienen dependencias temporales.</p>
+            </li>
+
+            <li>
+              <h3>Redes neuronales recurrentes</h3>
+              <p>Las redes neuronales recurrentes son diseñadas para manejar datos secuenciales, como series de tiempo o texto.
+                A diferencia de las redes prealimentadas, estas redes tienen conexiones que permiten la información
+                circular, lo que les permite mantener un estado interno y considerar el contexto de los datos.</p>
+            </li>
+            
+            <li>
+              <h3>Redes neuronales convolucionales</h3>
+              <p>diseñadas específicamente para tareas relacionadas con imágenes, las CNN extraen atributos de imágenes
+                mediante una capa convolucional, que identifica patrones como bordes y formas.</p>
+            </li>
+
+            <li>
+              <h3>Redes neuronales adversariales</h3>
+              <p>Las redes neuronales adverariales (GANs) consisten en dos redes neuronales que compiten entre sí:
+                una generadora y una discriminadora. La generadora intenta crear datos realistas, mientras 
+                que la discriminadora intenta distinguir entre datos reales y generados.</p>
+            </li>
+          </ul>
+          <br><hr><br>
+
+          <h2 id="audio">Audio complementario</h2>
+          <div class="media-block audio">
+            <audio controls>
+              <source src="../audio/ttsmaker-file-2026-9-24-22-53-54.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p><strong>Transcripción del audio:</strong> Una red neuronal en inteligencia artificial es un modelo
+            informático inspirado en el cerebro humano que procesa datos a través de capas de nodos interconectados
+            (neuronas artificiales). Su propósito principal es detectar patrones complejos en grandes cantidades de
+            información para aprender a tomar decisiones o hacer predicciones por sí misma, sin necesidad de programar
+            reglas específicas para cada tarea; gracias a esto impulsan tecnologías como el reconocimiento de voz y rostros,
+            la traducción automática o los motores de recomendación.</p>
+        </article>
+
+        <aside class="info-panel">
+          <h3>En esta sección:</h3>
+          <ul>
+            <li><a href="#inteligencia-artificial" style="color:#fff;">¿Qué es la IA?</a></li>
+            <li><a href="#tipos-de-redes" style="color:#fff;">Tipos de Redes</a></li>
+            <li><a href="#audio" style="color:#fff;">Audio complementario</a></li>
+            <li><a href="#impacto" style="color:#fff;">Impacto</a></li>
+          </ul>
+          <div style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.25);">
+            <img src="../img/cerbro1.jpg" alt="Imagen de ejemplo" style="width:100%; max-width: 100%; border-radius: 8px;">
+          </div>
+          <p style="margin-bottom:0;">¿Tienes dudas sobre el tema? Escríbenos desde la página de
+             contacto.</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN FINAL -->
+    <section>
+      <div class="container article-layout" style="grid-template-columns: 1fr;">
+        <article class="article-media" style="margin-bottom: 0;">
+          <div>
+            <h2 id="impacto">Impacto</h2>
+            <p>Sin importar la edad, la condición física o el origen, las redes neuronales están transformando la vida
+              cotidiana de forma tangible. Desde la detección temprana de enfermedades como el Alzheimer mediante el
+              análisis computacional de la voz, hasta la traducción instantánea del lenguaje de señas en tiempo real
+              o el subtitulado automático para personas con discapacidad auditiva, esta tecnología rompe barreras de
+              accesibilidad antes infranqueables.</p>
+            <p>Nuestro enfoque combina explicaciones visuales con ejemplos prácticos para que cualquier
+               persona, sin importar su experiencia previa, pueda comprender cómo funcionan estos
+               modelos.</p>
+            <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
+          </div>
+          <div>
+            <img src="../img/ACV-Blog-Featured-Image-AI-for-Seniors-0525.webp" style="width:100%; max-width: 580px; border-radius: 8px;" alt="Ilustración de una red neuronal  ">
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="color:#fff;">
+            <img src="../img/logo.svg" alt="Logotipo de NeuroLab">
+            NeuroLab
+          </a>
+          <p style="margin-top:12px; max-width: 34ch;">Contenido educativo sobre redes neuronales e
+             inteligencia artificial.</p>
+        </div>
+
+        <div>
+          <h4>Recursos externos</h4>
+          <ul>
+            <li><a href="https://es.wikipedia.org/wiki/Red_neuronal_artificial" target="_blank" rel="noopener">Red neuronal artificial — Wikipedia</a></li>
+            <li><a href="https://playground.tensorflow.org/" target="_blank" rel="noopener">TensorFlow Playground</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Síguenos en nuestras redes</h4>
+          <ul>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener">X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 NeuroLab. Todos los derechos reservados.</span>
+        <span>Universidad Tecnológica de Panamá — Ingeniería Web</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
